@@ -1,0 +1,120 @@
+#robotstxt - to get permission, connectivity, etc.....
+#rvest - to take the HTML scrapper point
+library(robotstxt)
+library(rvest)
+#scrapping websites
+url <- "https://www.moneycontrol.com"
+#allowability
+path = paths_allowed(url)
+#HTML elements from website
+web <- read_html(url)
+setwd("~/vac")
+library(robotstxt)
+library(rvest)
+#scrapping websites
+url <- "https://www.moneycontrol.com"
+#allowability
+path = paths_allowed(url)
+#HTML elements from website
+web <- read_html(url)
+#segregating item name
+Item_Name<- web %>% html_nodes("#indicesTable a") %>%html_text()
+View(Item_Name)
+#segregating LTP
+LTP<- web %>% html_nodes("td:nth-child(2)") %>%html_text()
+View(LTP)
+library(robotstxt)
+library(rvest)
+#scrapping websites
+url <- "https://www.moneycontrol.com"
+#allowability
+path = paths_allowed(url)
+#HTML elements from website
+web <- read_html(url)
+#segregating item name
+STOCK_Name<- web %>% html_nodes("#indicesTable a") %>%html_text()
+View(STOCK_Name)
+#segregating LTP
+LTP<- web %>% html_nodes("td:nth-child(2)") %>%html_text()
+View(LTP)
+#segregating price
+CHG<- web %>% html_nodes("td:nth-child(3)") %>%html_text()
+View(CHG)
+library(robotstxt)
+library(rvest)
+#scrapping websites
+url <- "https://in.indeed.com"
+#allowability
+path = paths_allowed(url)
+#HTML elements from website
+jb <- read_html(url)
+library(robotstxt)
+library(rvest)
+#scrapping websites
+url <- "https://in.indeed.com"
+#allowability
+path = paths_allowed(url)
+#HTML elements from website
+web<- read_html(url)
+#segregating COMPANY
+COMPANY<- web %>% html_nodes(".css-1n9ontj") %>%html_text()
+View(COMPANY)
+#segregating SECTOR
+SECTOR<- web %>% html_nodes(".css-kbqft4") %>%html_text()
+View(SECTOR)
+#segregating REVIEW
+REVIEW<- web %>% html_nodes(".css-lws6k3") %>%html_text()
+View(REVIEW)
+#scrapping websites
+url <- "https://in.indeed.com"
+#allowability
+path = paths_allowed(url)
+library(robotstxt)
+library(rvest)
+#scrapping websites
+url <- "https://in.indeed.com"
+#allowability
+path = paths_allowed(url)
+#HTML elements from website
+web<- read_html(url)
+#HTML elements from website
+web <- read_html(url)
+library(robotstxt)
+library(robotstxt)
+library(rvest)
+#scrapping websites
+url <- "https://www.agoda.com"
+#allowability
+path = paths_allowed(url)
+#HTML elements from website
+web <- read_html(url)
+#segregating hotel name
+hotel_name<- web %>% html_nodes(".fSXLsY") %>%html_text()
+View(hotel_name)
+#segregating location
+location<- web %>% html_nodes(".jbJDWL") %>%html_text()
+View(location)
+#segregating REVIEw
+REVIEW<- web %>% html_nodes(".eRxXoo") %>%html_text()
+View(REVIEW)
+#segregating price
+price<- web %>% html_nodes(".PropertyCardPrice--Soldout , .PropertyCardPrice__Value") %>%html_text()
+View(price)
+#creating dataframe
+hotels<- data.frame(hotel_name,location,REVIEW,price)
+View(hotels)
+#saving data
+write.csv(jobrole,"goatrip.csv")
+setwd("~/vac")
+setwd("~/vac")
+library(robotstxt)
+library(rvest)
+#scrapping websites
+url <- "https://www.agoda.com"
+#allowability
+path = paths_allowed(url)
+#HTML elements from website
+web <- read_html(url)
+#segregating hotel name
+hotel_name<- web %>% html_nodes(".fSXLsY") %>%html_text()
+View(hotel_name)

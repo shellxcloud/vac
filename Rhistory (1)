@@ -1,0 +1,35 @@
+url <-https://www.imdb.com/calendar/
+# Checking website
+path = paths_allowed(url)
+imdb=read.csv("movies.csv")
+View(imdb)
+imdb$year <- gsub("\\(|\\)","",imdb$year)
+#importing dataset
+imdb=read.csv
+setwd("~/")
+a=100
+load("~/.RData")
+load("~/.RData")
+load("~/.RData")
+load("~/.Rhistory")
+save.image("~/.Rhistory.RData")
+setwd("~/018")
+install.packages("robotstxt")
+install.packages("rvest")
+library(rvest)
+library(robotstxt)
+url<- 'https://www.imdb.com/chart/top/'
+path=paths_allowed(url)
+#html elements from the website
+my_html<- read_html(url)
+View(my_html)
+#segregating tables
+my_tables<-html_nodes(my_html,'table')
+View(my_tables)
+#extracting table
+movie_table<-html_table(my_tables)[[1]]
+View(movie_table)
+#saving
+write.csv(movie_table,"movie.csv")
+#datatype check
+str(movie_table)
